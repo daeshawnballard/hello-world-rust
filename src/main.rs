@@ -10,9 +10,19 @@ fn greet(name: &str) {
         "Yo, {}! Let's build something amazing together! 🔥",
     ];
 
-    let idx = rand::thread_rng().gen_range(0..greetings.len());
-    println!("\n{}", greetings[idx].replace("{}", name));
-    println!("Fun fact: The Rust programming language is named after a fungus.");
+    let fun_facts = [
+        "The Rust programming language is named after a fungus. 🍄",
+        "Rust has been the most loved language on Stack Overflow for years running. 💕",
+        "Rust's mascot, Ferris, is a crab — not a lobster! 🦀",
+        "Rust guarantees memory safety without needing a garbage collector. 🧹",
+        "The first version of the Rust compiler was written in OCaml. 🐫",
+    ];
+
+    let mut rng = rand::thread_rng();
+    let greet_idx = rng.gen_range(0..greetings.len());
+    let fact_idx = rng.gen_range(0..fun_facts.len());
+    println!("\n{}", greetings[greet_idx].replace("{}", name));
+    println!("Fun fact: {}", fun_facts[fact_idx]);
     println!("Keep building awesome things! 🦀");
 }
 
