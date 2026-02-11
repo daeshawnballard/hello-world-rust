@@ -1,5 +1,11 @@
 use std::io::{self, Write};
 
+fn greet(name: &str) {
+    println!("\nNice to meet you, {}! 🎉", name);
+    println!("Fun fact: The Rust programming language is named after a fungus.");
+    println!("Keep building awesome things! 🦀");
+}
+
 fn main() {
     println!("Hello, world!");
     println!("Welcome to EntireHQ!\n");
@@ -14,8 +20,6 @@ fn main() {
     if name.is_empty() {
         println!("No name entered — but welcome anyway, mysterious stranger!");
     } else {
-        println!("\nNice to meet you, {}! 🎉", name);
-        println!("Fun fact: The Rust programming language is named after a fungus.");
-        println!("Keep building awesome things! 🦀");
+        greet(name);
     }
 }
